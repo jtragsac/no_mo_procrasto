@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>X_Procrasto|Tasko_X</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">-->
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <div class="Header">
+    <h1 id="title">No Mo' Procrastinating / No Mo' Wondering</h1>
+  </div>
+  <div class="section">
+    <h2 id="Purpose">Purpose</h2>
+  <p>
+    In stressful situations people procrastinate. With this window open you will be automatically reminded not to. These buttons set timers that will allow you to only procrastinate for however long you allow yourself to.
+  </p>
+  <p>
+    You can use the general browsing button to set a timer without opening a browser, our quick links to access common websites, or type in the adress of sites with the other websites button.
+  </p>
+
+<hr>
+
+  <p id="prevention-info"><p>
+
+<audio id="alertSound" src="alert_sound.mp3" preload="auto"></audio>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>-->
+
+<div id="box" title="Title">
+  hi
+</div>
+<!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>-->
+<script type="text/javascript">
+var targetSite = null;
+var userInput = null;
+
+/*******************************************************************************
+if (window.jQuery) {  
+    alert("loaded");
+} else {
+    // jQuery is not loaded
+}
+*******************************************************************************/
+function site(){
+  targetSite = prompt("What site would you like to go to?", "https://www.");
+}
+
+function alertThing(){
+  //prompt
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+  }
+
+  //so we won't have a no-time task loop 
+  if(userInput > 0)
+  {
+  
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+
+      document.getElementById('alertSound').play();
+      var verifyConfirm = window.confirm("< < ARE YOU DOING WHAT YOU NEED TO BE DOING??? > >"); 
+      
+    }, userInput);
+  }
+}
+
+/**************************************************************************
+function alertThingFacebook(){
+  //prompt
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+  }
+  if(userInput > 0){
+    window.open("http://facebook.com");//so we won't have a no-time task loop 
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+    alert("Get back on task!"); }, userInput);
+  }
+}
+
+function alertThing9gag(){
+  //prompt
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+  }
+  if(userInput > 0){
+    window.open("http://9gag.com");//so we won't have a no-time task loop 
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+    alert("Get back on task!"); }, userInput);
+  }
+}
+
+function alertThingYoutube(){
+  //prompt
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+  }
+  if(userInput > 0){
+    window.open("http://youtube.com");//so we won't have a no-time task loop 
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+    alert("Get back on task!"); }, userInput);
+  }
+}
+
+function alertThingGoogle(){
+  //prompt
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+  }
+  if(userInput > 0){
+    window.open("http://google.com");//so we won't have a no-time task loop 
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+    alert("Get back on task!"); }, userInput);
+  }
+}
+
+function alertThingReddit(){
+  //prompt
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+  }
+  if(userInput > 0){
+    window.open("http://reddit.com");//so we won't have a no-time task loop 
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+    alert("Get back on task!"); }, userInput);
+  }
+}
+
+function alertThingTwitter(){
+  //prompt
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+  }
+  if(userInput > 0){
+    window.open("http://twitter.com");//so we won't have a no-time task loop 
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+    alert("Get back on task!"); }, userInput);
+
+    
+  }
+}
+********************************************************************************/
+
+function go(){//open targetSite in new tab
+window.open(
+  targetSite,
+'_blank');
+}
+
+</script>
+
+<!--buttons--> 
+<center><u><h3>Quick Links</h3></u>
+
+<!--
+<button id="facebook" onclick="alertThingFacebook()">facebook</button></a>
+<button id="9gag" onclick="alertThing9gag()">9gag </button></a>
+<button onclick="alertThingYoutube()">youtube</button></a>
+<button onclick="alertThingGoogle()">google</button></a>
+<button onclick="alertThingReddit()">reddit</button></a>
+<button onclick="alertThingTwitter()">twitter</button></a>
+<br>
+<br>
+<br>
+<br>
+-->
+
+<br><button onclick="site(), alertThing(), go()">other websites</button>
+<button onclick="alertThing()">general browsing</button>
+</div>
+</body>
+</html>
