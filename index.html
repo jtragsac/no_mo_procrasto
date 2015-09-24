@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>X_Procrasto|Tasko_X</title>
-  <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">-->
   <meta charset="utf-8">
 </head>
@@ -27,9 +27,7 @@
 <audio id="alertSound" src="alert_sound.mp3" preload="auto"></audio>
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>-->
 
-<div id="box" title="Title">
-  hi
-</div>
+
 <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>-->
 <script type="text/javascript">
@@ -62,7 +60,7 @@ function alertThing(){
     setInterval(function(){
 
       document.getElementById('alertSound').play();
-      var verifyConfirm = window.confirm("< < ARE YOU DOING WHAT YOU NEED TO BE DOING??? > >"); 
+      var verifyConfirm = window.confirm("< <Are You Doing What You Need To Be Doing???> >"); 
       
     }, userInput);
   }
@@ -180,8 +178,7 @@ window.open(
 <br>
 -->
 
-<br><button onclick="site(), alertThing(), go()">other websites</button>
-<button onclick="alertThing()">general browsing</button>
+<button onclick="alertThing()">Start</button>
 </div>
 </body>
 </html>
