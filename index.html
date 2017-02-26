@@ -67,6 +67,8 @@ function alertThing(){
   //prompt
   userInputWebsite = prompt("What Website(s) are you avoiding? Enter as Youtube or Facebook or ...");
 
+  totalMessageOnWebsite = "Are You On " + userInputWebsite + " ???";
+
   userInput = prompt("How many minutes do you want the timer to run for?");
   while( isNaN(userInput)){
     userInput = prompt("Please use Numbers.");
@@ -74,9 +76,9 @@ function alertThing(){
   }
 
   var span = document.getElementById("changeText");
-  span.style.fontSize = "100px";
-  document.getElementById("changeText").innerHTML = userInputWebsite;
-  
+  span.style.fontSize = "100px"
+  document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
+    
 
   //so we won't have a no-time task loop 
   if(userInput > 0)
