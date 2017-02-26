@@ -20,9 +20,10 @@
   <p> </p>
   <p> </p>
   <p> </p>
+  <span class="avoidWebsiteText"><p> </p></span>
   <p> </p>
 
-  <p id="changeText">
+  <p>
     In stressful situations people tend to procrastinate. Even the most purest and innocent of all probably drift into the procrastination abyss. To the guy in front of you, the guy behind you, the guy next to you, the guy flying above you, the guy inside you, a guy walking, a guy playing league of legends, or the guy eating tacos with jamaica, we all sometimes get off task.  
   </p>
   
@@ -63,7 +64,7 @@ function site(){
 
 function alertThing(){
   //prompt
-  userInputWebsite = " " + prompt("What Website(s) are you avoiding? Enter as Youtube or Facebook or ...");
+  userInputWebsite = prompt("What Website(s) are you avoiding? Enter as Youtube or Facebook or ...");
 
   userInput = prompt("How many minutes do you want the timer to run for?");
 
@@ -83,9 +84,6 @@ function alertThing(){
       document.getElementById('alertSound').play();
       
     }, userInput);
-
-      //change!
-  document.getElementById("changeText").innerHTML = "userInputWebsite";
   }
 }
 
