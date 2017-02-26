@@ -67,9 +67,6 @@ function alertThing(){
 
   userInput = prompt("How many minutes do you want the timer to run for?");
 
-  //change!
-  document.getElementById("changeText").innerHTML = "userInputWebsite";
-
   while( isNaN(userInput)){
     userInput = prompt("Please use Numbers.");
   }
@@ -86,6 +83,9 @@ function alertThing(){
       document.getElementById('alertSound').play();
       
     }, userInput);
+
+      //change!
+  document.getElementById("changeText").innerHTML = "userInputWebsite";
   }
 }
 
