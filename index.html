@@ -76,8 +76,9 @@ function alertThing(){
     userInput = userInput * 60000;//milliseconds to seconds
     setInterval(function(){
 
+      
+      var verifyConfirm = window.confirm("< <Are You On " + userInputWebsite + " ???> >"); 
       document.getElementById('alertSound').play();
-      var verifyConfirm = window.confirm("< <Are You On " + userInputWebsite + "???> >"); 
       
     }, userInput);
   }
