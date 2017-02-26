@@ -63,6 +63,35 @@ function site(){
   targetSite = prompt("What site would you like to go to?", "https://www.");
 }
 
+blinkDecider = true;
+
+function blinkTextMessage(){
+
+  if (blinkDecider == true)
+  {
+    var span = document.getElementById("changeText");
+    span.style.fontSize = "100px"
+    document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
+    document.getElementById("changeText").backgroundColor = "red";
+
+    var divParagraph = document.getElementById("changeText");
+    divParagraph.style.backgroundColor = "red";
+    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
+
+  }
+  else
+  {
+    var span = document.getElementById("changeText");
+    span.style.fontSize = "100px"
+    document.getElementById("changeText").innerHTML = "-----------";
+    document.getElementById("changeText").backgroundColor = "red";
+
+    var divParagraph = document.getElementById("changeText");
+    divParagraph.style.backgroundColor = "red";
+    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
+  }
+}
+
 function alertThing(){
   //prompt
   userInputWebsite = prompt("What Website(s) are you avoiding? Enter as Youtube or Facebook or ...");
@@ -75,14 +104,16 @@ function alertThing(){
 
   }
 
+  //changes paragraph tags to message
   var span = document.getElementById("changeText");
-  span.style.fontSize = "100px"
-  document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
-  document.getElementById("changeText").backgroundColor = "red";
+    span.style.fontSize = "100px"
+    document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
+    document.getElementById("changeText").backgroundColor = "red";
 
-  var divParagraph = document.getElementById("changeText");
-  divParagraph.style.backgroundColor = "red";
-  divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
+    var divParagraph = document.getElementById("changeText");
+    divParagraph.style.backgroundColor = "red";
+    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
+
 
   //so we won't have a no-time task loop 
   if(userInput > 0)
@@ -90,12 +121,15 @@ function alertThing(){
   
     userInput = userInput * 60000;//milliseconds to seconds
     setInterval(function(){
-
-      document.getElementById('alertSound').play();
-      var verifyConfirm = window.confirm("< <Are You On " + userInputWebsite + " ???> >"); 
-      document.getElementById('alertSound').play();
-
       
+      //makes message come back
+      blinkDecider = true;
+      blinkTextMessage();
+
+      document.getElementById('alertSound').play();
+      var verifyConfirm = window.confirm(); 
+      document.getElementById('alertSound').play();
+
     }, userInput);
   }
 }
@@ -215,7 +249,7 @@ window.open(
 <button onclick="alertThing()">Start</button>
 
 <p> </p>
-<p> </p>
+<p>If You Experience Trouble Try to Open a New Tab and Try Again :)</p>
 <p> </p>
 <p>Made on 2015, in a 24 hour hackathon called HS Hacks II in PayPal building:: By Ethan Levitt, Ralph Haddad, and Thomas Ragsac</p>
 
