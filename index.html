@@ -80,9 +80,9 @@ function blinkTextMessage(){
 
 function alertThing(){
   //prompt
-  userInputWebsite = prompt("What Website(s) are you avoiding? Enter as Youtube or Facebook or ...");
+  userInputWebsite = prompt("What Message Do You Want Displayed?? (Ex: Avoid Youtube or Take a Break :)");
 
-  totalMessageOnWebsite = "Are You On " + userInputWebsite + " ???";
+  totalMessageOnWebsite = userInputWebsite;
 
   userInput = prompt("How many minutes do you want the timer to run for?");
   while( isNaN(userInput)){
@@ -158,89 +158,6 @@ window.open(
   <p id="prevention-info"><p>
 
 <audio id="alertSound" src="alert_sound(MGS).mp3" preload="auto"></audio>
-<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>-->
-
-
-<!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>-->
-<script type="text/javascript">
-var targetSite = null;
-var userInput = null;
-
-/*******************************************************************************
-if (window.jQuery) {  
-    alert("loaded");
-} else {
-    // jQuery is not loaded
-}
-*******************************************************************************/
-function site(){
-  targetSite = prompt("What site would you like to go to?", "https://www.");
-}
-
-
-function blinkTextMessage(){
-
-    var span = document.getElementById("changeText");
-    span.style.fontSize = "100px"
-    document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
-    document.getElementById("changeText").backgroundColor = "red";
-
-    var divParagraph = document.getElementById("changeText");
-    divParagraph.style.backgroundColor = "red";
-    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
-}
-
-function alertThing(){
-  //prompt
-  userInputWebsite = prompt("What Website(s) are you avoiding? Enter as Youtube or Facebook or ...");
-
-  totalMessageOnWebsite = "Are You On " + userInputWebsite + " ???";
-
-  userInput = prompt("How many minutes do you want the timer to run for?");
-  while( isNaN(userInput)){
-    userInput = prompt("Please use Numbers.");
-
-  }
-
-  //changes paragraph tags to message
-  var span = document.getElementById("changeText");
-    span.style.fontSize = "100px"
-    document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
-    document.getElementById("changeText").backgroundColor = "red";
-
-    var divParagraph = document.getElementById("changeText");
-    divParagraph.style.backgroundColor = "red";
-    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
-
-
-  //so we won't have a no-time task loop 
-  if(userInput > 0)
-  {
-  
-    userInput = userInput * 60000;//milliseconds to seconds
-    setInterval(function(){
-      
-      //makes message come back
-      blinkDecider = true;
-      blinkTextMessage();
-
-      document.getElementById('alertSound').play();
-      var verifyConfirm = window.confirm(); 
-      document.getElementById('alertSound').play();
-
-    }, userInput);
-  }
-}
-
-function go(){//open targetSite in new tab
-window.open(
-  targetSite,
-'_blank');
-}
-
-</script>
-
 <center><button onclick="alertThing()">Start</button></center>
 
 <hr>
