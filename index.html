@@ -24,16 +24,19 @@
     <div id="changeText">
       <p>
         In stressful situations people tend to procrastinate. Even the most purest and innocent of all probably drift into the procrastination abyss. To the guy in front of you, the guy behind you, the guy next to you, the guy flying above you, the guy inside you, a guy walking, a guy playing league of legends, or the guy eating tacos with red jamaica tea, we all sometimes get off task.  
-      </p>
-      
-      <p> </p>
-      <p> </p>
-      <p>
+  
         We all laugh when we joke about putting aside the work. But in the end we know it's painful. So what can we do to stop this dilema! Well this app won't stop it, but it will try to help.
       </p>
+
+      <h2>Instructions</h2>
       <p>
-        With this window open you will be automatically reminded not to. The start button will prompt you for a time. That time will determine how long you will not be reminded. 
-        Once you set the time be free to work on whatever!
+        With this window open you will be automatically reminded not to. The start button will prompt you for a time and websites you are avoiding. First type the website you are avoiding, then type in the time in terms of minutes. That time will determine how long you will not be reminded and a red banner reminding you to stay on task will replace this text.
+      </p>
+      <p>
+        Once you set the time be free to work on whatever! If you want, too, there are study playlists linked to youtube, soundcloud, and spotify
+      </p>
+      <p>
+        ( ` ω ´ ) Now get started soon!   ( ` ω ´ )
       </p>
     </div>
 
@@ -127,13 +130,7 @@ window.open(
 
 <center><button onclick="alertThing()">Start</button></center>
 
-    <!--Live Study Music/Playlists-->
-    <h3>Live Study Music from ChilledCow || Cafe Sounds || Spotify Playlists</h3>
-    <iframe width="400" height="280" src="https://www.youtube.com/embed/2f4ztyFMot4" frameborder="0"  controlallowfullscreen></iframe>
-
-    <iframe width="400" height="280" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/103745475&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-
-   
+   <h3>Spotify Study Playlists</h3>
    <!--Spotify-->
     <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Anasisdagoat%3Aplaylist%3A6OYi4CnZ65EYBWztpagSGe" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
@@ -143,8 +140,6 @@ window.open(
 
     <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A6zNDAR7uYeIKV7JwDjjJTk" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
-    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A0ExbFrTy6ypLj9YYNMTnmd" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-
     <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A67nMZWgcUxNa5uaiyLDR2x" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
     <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6aODn6goVrKOQIpqABxNe9" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
@@ -152,6 +147,11 @@ window.open(
     <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A4TcFU22iYKmqmjDnGjKW74" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
      <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aferrouselm%3Aplaylist%3A1NNgPIphceHlX1TGoNXk77" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <!--Live Study Music/Playlists-->
+    <h3>Live Study Music from ChilledCow || Cafe Sounds</h3>
+    <iframe width="400" height="280" src="https://www.youtube.com/embed/2f4ztyFMot4" frameborder="0"  controlallowfullscreen></iframe>
+    <iframe width="400" height="280" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/103745475&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
   </center>
 
@@ -233,94 +233,6 @@ function alertThing(){
   }
 }
 
-/**************************************************************************
-function alertThingFacebook(){
-  //prompt
-  userInput = prompt("How many minutes do you want the timer to run for?");
-  while( isNaN(userInput)){
-    userInput = prompt("Please use Numbers.");
-  }
-  if(userInput > 0){
-    window.open("http://facebook.com");//so we won't have a no-time task loop 
-    userInput = userInput * 60000;//milliseconds to seconds
-    setInterval(function(){
-    alert("Get back on task!"); }, userInput);
-  }
-}
-
-function alertThing9gag(){
-  //prompt
-  userInput = prompt("How many minutes do you want the timer to run for?");
-  while( isNaN(userInput)){
-    userInput = prompt("Please use Numbers.");
-  }
-  if(userInput > 0){
-    window.open("http://9gag.com");//so we won't have a no-time task loop 
-    userInput = userInput * 60000;//milliseconds to seconds
-    setInterval(function(){
-    alert("Get back on task!"); }, userInput);
-  }
-}
-
-function alertThingYoutube(){
-  //prompt
-  userInput = prompt("How many minutes do you want the timer to run for?");
-  while( isNaN(userInput)){
-    userInput = prompt("Please use Numbers.");
-  }
-  if(userInput > 0){
-    window.open("http://youtube.com");//so we won't have a no-time task loop 
-    userInput = userInput * 60000;//milliseconds to seconds
-    setInterval(function(){
-    alert("Get back on task!"); }, userInput);
-  }
-}
-
-function alertThingGoogle(){
-  //prompt
-  userInput = prompt("How many minutes do you want the timer to run for?");
-  while( isNaN(userInput)){
-    userInput = prompt("Please use Numbers.");
-  }
-  if(userInput > 0){
-    window.open("http://google.com");//so we won't have a no-time task loop 
-    userInput = userInput * 60000;//milliseconds to seconds
-    setInterval(function(){
-    alert("Get back on task!"); }, userInput);
-  }
-}
-
-function alertThingReddit(){
-  //prompt
-  userInput = prompt("How many minutes do you want the timer to run for?");
-  while( isNaN(userInput)){
-    userInput = prompt("Please use Numbers.");
-  }
-  if(userInput > 0){
-    window.open("http://reddit.com");//so we won't have a no-time task loop 
-    userInput = userInput * 60000;//milliseconds to seconds
-    setInterval(function(){
-    alert("Get back on task!"); }, userInput);
-  }
-}
-
-function alertThingTwitter(){
-  //prompt
-  userInput = prompt("How many minutes do you want the timer to run for?");
-  while( isNaN(userInput)){
-    userInput = prompt("Please use Numbers.");
-  }
-  if(userInput > 0){
-    window.open("http://twitter.com");//so we won't have a no-time task loop 
-    userInput = userInput * 60000;//milliseconds to seconds
-    setInterval(function(){
-    alert("Get back on task!"); }, userInput);
-
-    
-  }
-}
-********************************************************************************/
-
 function go(){//open targetSite in new tab
 window.open(
   targetSite,
@@ -328,22 +240,6 @@ window.open(
 }
 
 </script>
-
-<!--buttons--> 
-<!--
-<center><u><h3>Quick Links</h3></u>
-
-<button id="facebook" onclick="alertThingFacebook()">facebook</button></a>
-<button id="9gag" onclick="alertThing9gag()">9gag </button></a>
-<button onclick="alertThingYoutube()">youtube</button></a>
-<button onclick="alertThingGoogle()">google</button></a>
-<button onclick="alertThingReddit()">reddit</button></a>
-<button onclick="alertThingTwitter()">twitter</button></a>
-<br>
-<br>
-<br>
-<br>
--->
 
 <center><button onclick="alertThing()">Start</button></center>
 
