@@ -39,11 +39,119 @@
 
     <hr>
 
-    <!--Live Study Music-->
-    <h3>Live Study Music from ChilledCow || Cafe Sounds from 8 Hours of</h3>
+      <p id="prevention-info"><p>
+
+<audio id="alertSound" src="alert_sound(MGS).mp3" preload="auto"></audio>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>-->
+
+
+<!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>-->
+<script type="text/javascript">
+var targetSite = null;
+var userInput = null;
+
+/*******************************************************************************
+if (window.jQuery) {  
+    alert("loaded");
+} else {
+    // jQuery is not loaded
+}
+*******************************************************************************/
+function site(){
+  targetSite = prompt("What site would you like to go to?", "https://www.");
+}
+
+
+function blinkTextMessage(){
+
+    var span = document.getElementById("changeText");
+    span.style.fontSize = "100px"
+    document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
+    document.getElementById("changeText").backgroundColor = "red";
+
+    var divParagraph = document.getElementById("changeText");
+    divParagraph.style.backgroundColor = "red";
+    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
+}
+
+function alertThing(){
+  //prompt
+  userInputWebsite = prompt("What Website(s) are you avoiding? Enter as Youtube or Facebook or ...");
+
+  totalMessageOnWebsite = "Are You On " + userInputWebsite + " ???";
+
+  userInput = prompt("How many minutes do you want the timer to run for?");
+  while( isNaN(userInput)){
+    userInput = prompt("Please use Numbers.");
+
+  }
+
+  //changes paragraph tags to message
+  var span = document.getElementById("changeText");
+    span.style.fontSize = "100px"
+    document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
+    document.getElementById("changeText").backgroundColor = "red";
+
+    var divParagraph = document.getElementById("changeText");
+    divParagraph.style.backgroundColor = "red";
+    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
+
+
+  //so we won't have a no-time task loop 
+  if(userInput > 0)
+  {
+  
+    userInput = userInput * 60000;//milliseconds to seconds
+    setInterval(function(){
+      
+      //makes message come back
+      blinkDecider = true;
+      blinkTextMessage();
+
+      document.getElementById('alertSound').play();
+      var verifyConfirm = window.confirm(); 
+      document.getElementById('alertSound').play();
+
+    }, userInput);
+  }
+}
+
+function go(){//open targetSite in new tab
+window.open(
+  targetSite,
+'_blank');
+}
+
+</script>
+
+<center><button onclick="alertThing()">Start</button></center>
+
+    <!--Live Study Music/Playlists-->
+    <h3>Live Study Music from ChilledCow || Cafe Sounds || Spotify Playlists</h3>
     <iframe width="400" height="280" src="https://www.youtube.com/embed/2f4ztyFMot4" frameborder="0"  controlallowfullscreen></iframe>
 
     <iframe width="400" height="280" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/103745475&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+   
+   <!--Spotify-->
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Anasisdagoat%3Aplaylist%3A6OYi4CnZ65EYBWztpagSGe" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Achillhopmusic%3Aplaylist%3A74sUjcvpGfdOvCHvgzNEDO" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A7lIVkvelOfhq8eoBNmPl4A" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A6zNDAR7uYeIKV7JwDjjJTk" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A0ExbFrTy6ypLj9YYNMTnmd" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A67nMZWgcUxNa5uaiyLDR2x" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6aODn6goVrKOQIpqABxNe9" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A4TcFU22iYKmqmjDnGjKW74" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+     <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aferrouselm%3Aplaylist%3A1NNgPIphceHlX1TGoNXk77" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
   </center>
 
