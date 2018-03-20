@@ -30,19 +30,9 @@ var targetSite = null;
 var userInput = null;
 var impactSizeMessage = "80px";
 
-
-function blinkTextMessage(){
-    var span = document.getElementById("changeText");
-    span.style.fontSize = impactSizeMessage;
-    document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
-    document.getElementById("changeText").backgroundColor = "lightblue";
-    var divParagraph = document.getElementById("changeText");
-    divParagraph.style.backgroundColor = "lightblue";
-    divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
-}
 function alertThing(){
   //prompt
-  userInputWebsite = prompt("What Message Do You Want Displayed??", "Be sure you are staying on task, but also walk around ocasionally to stay efficient");
+  userInputWebsite = prompt("What Message Do You Want Displayed??", "Avoid Youtube, Take an Ocasional Break, then FOCUS AND STAY ON TASK!");
   totalMessageOnWebsite = userInputWebsite;
   userInput = prompt("How many minutes do you want the timer to run for?", "5");
   while( isNaN(userInput)){
@@ -52,10 +42,11 @@ function alertThing(){
   var span = document.getElementById("changeText");
     span.style.fontSize = impactSizeMessage;
     document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
-    document.getElementById("changeText").backgroundColor = "lightblue";
     var divParagraph = document.getElementById("changeText");
-    divParagraph.style.backgroundColor = "lightblue";
+    divParagraph.style.backgroundColor = "#00ccff";
     divParagraph.style.fontFamily = "Impact,Charcoal,sans-serif";
+    divParagraph.style.border = "10px solid #00a3cc";
+    divParagraph.style.borderRadius = "35px";
   //so we won't have a no-time task loop 
   if(userInput > 0)
   {
@@ -64,8 +55,6 @@ function alertThing(){
     setInterval(function(){
       
       //makes message come back
-      blinkDecider = true;
-      blinkTextMessage();
       document.getElementById('alertSound').play();
       var verifyConfirm = window.confirm(); 
       document.getElementById('alertSound').play();
