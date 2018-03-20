@@ -1,27 +1,29 @@
 .Header {
-	border: 10px solid #00a3cc;
-	border-radius: 35px;
-	background-color: #00b8e6;
-	padding: 5px;
-	margin: 0px;
-	box-shadow: 10px 10px 5px #888888;
-	font-family: Helvetica;
-	word-wrap: break-word;
+   border: 10px solid #00a3cc;
+   border-radius: 35px;
+   background-color: #00b8e6;
+   margin-top: 0px;
+   padding: 5px;
+   margin: 0px;
+   box-shadow: 10px 10px 5px #888888;
+   font-family: Helvetica;
+   word-wrap: break-word;
 }
 
 #title {
-	font-size: 50px;
-	text-align: center;
-	font-family: Helvetica;
+   font-size: 50px;
+   text-align: center;
+   font-family: Helvetica;
 }
 
 body {
-	background-color: grey;
+   background-color: grey;
+}
 
 #Purpose {
-	font-size: 50px;
-	text-align: center;
-	font-family: Helvetica;
+   font-size: 50px;
+   text-align: center;
+   font-family: Helvetica;
 }
 
 h1,h2 {
@@ -31,10 +33,10 @@ h1,h2 {
 
 ol,li,p{
 
-	text-align: center;
-	font-size: 20px;
-	font-family: 'Light 300', Helvetica;
-	
+   text-align: center;
+   font-size: 20px;
+   font-family: 'Light 300', Helvetica;
+   
 }
 
 button {
