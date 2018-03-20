@@ -24,24 +24,13 @@
       <p id="prevention-info"><p>
 
 <audio id="alertSound" src="alert_sound(MGS).mp3" preload="auto"></audio>
-<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>-->
 
-
-<!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>-->
+<!--CODE SECTION-->
 <script type="text/javascript">
 var targetSite = null;
 var userInput = null;
-/*******************************************************************************
-if (window.jQuery) {  
-    alert("loaded");
-} else {
-    // jQuery is not loaded
-}
-*******************************************************************************/
-function site(){
-  targetSite = prompt("What site would you like to go to?", "https://www.");
-}
+
+
 function blinkTextMessage(){
     var span = document.getElementById("changeText");
     span.style.fontSize = "100px"
@@ -53,7 +42,7 @@ function blinkTextMessage(){
 }
 function alertThing(){
   //prompt
-  userInputWebsite = prompt("What Message Do You Want Displayed?? (Ex: Avoid Youtube or Take a Break :)");
+  userInputWebsite = prompt("What Message Do You Want Displayed??", "Avoid Youtube, Take a Break, FOCUS AND STAY ON TASK!");
   totalMessageOnWebsite = userInputWebsite;
   userInput = prompt("How many minutes do you want the timer to run for?");
   while( isNaN(userInput)){
