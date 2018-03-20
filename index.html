@@ -19,7 +19,6 @@
   
   <center>
     <div id="changeText"><h2>"Message Goes Here"<h2></div>
-    <hr>
 
       <p id="prevention-info"><p>
 
@@ -29,11 +28,12 @@
 <script type="text/javascript">
 var targetSite = null;
 var userInput = null;
+var impactSizeMessage = "80px";
 
 
 function blinkTextMessage(){
     var span = document.getElementById("changeText");
-    span.style.fontSize = "100px"
+    span.style.fontSize = impactSizeMessage;
     document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
     document.getElementById("changeText").backgroundColor = "lightblue";
     var divParagraph = document.getElementById("changeText");
@@ -42,15 +42,15 @@ function blinkTextMessage(){
 }
 function alertThing(){
   //prompt
-  userInputWebsite = prompt("What Message Do You Want Displayed?? (ex: Avoid Youtube, Take a Break)", "Be sure to stay on task, but also take some breaks to stay efficient.");
+  userInputWebsite = prompt("What Message Do You Want Displayed??", "Avoid Youtube, Take an Ocasional Break, then FOCUS AND STAY ON TASK!");
   totalMessageOnWebsite = userInputWebsite;
-  userInput = prompt("How many minutes do you want the timer to run for?");
+  userInput = prompt("How many minutes do you want the timer to run for?", "5");
   while( isNaN(userInput)){
     userInput = prompt("Please use Numbers.");
   }
   //changes paragraph tags to message
   var span = document.getElementById("changeText");
-    span.style.fontSize = "100px"
+    span.style.fontSize = impactSizeMessage;
     document.getElementById("changeText").innerHTML = totalMessageOnWebsite;
     document.getElementById("changeText").backgroundColor = "lightblue";
     var divParagraph = document.getElementById("changeText");
@@ -83,10 +83,7 @@ window.open(
   <p id="prevention-info"><p>
 
 <audio id="alertSound" src="alert_sound(MGS).mp3" preload="auto"></audio>
-<center><button onclick="alertThing()">Start</button></center>
-
-<hr>
-      
+<center><button onclick="alertThing()">Start</button></center>      
 </div>
 </body>
 </html>
